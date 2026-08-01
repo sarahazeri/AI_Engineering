@@ -2,6 +2,9 @@ import os
 import json
 from openai import OpenAI
 from tools import TOOLS_SCHEMA, TOOL_MAP
+from dotenv import load_dotenv
+
+load_dotenv()
 
 client = OpenAI(
     base_url="https://api.groq.com/openai/v1",
