@@ -1,0 +1,168 @@
+[
+  {
+    "id": "create-01",
+    "input": "Draw a flowchart of user signup with form, validate, create account, and email confirmation",
+    "expectedCharacteristics": ["4 rectangle elements labeled form, validate, create account, email confirmation", "3 arrow elements"],
+    "difficulty": "simple",
+    "category": "create"
+  },
+  {
+    "id": "create-02",
+    "input": "Draw a 3-step pipeline with Start, Process, and Finish connected sequentially",
+    "expectedCharacteristics": ["3 rectangle elements labeled Start, Process, Finish", "2 arrow elements"],
+    "difficulty": "simple",
+    "category": "create"
+  },
+  {
+    "id": "create-03",
+    "input": "Create a diagram with 2 boxes labeled Client and Server connected by an arrow",
+    "expectedCharacteristics": ["2 rectangle elements labeled Client, Server", "1 arrow element"],
+    "difficulty": "simple",
+    "category": "create"
+  },
+  {
+    "id": "create-04",
+    "input": "Draw an architecture diagram showing API Gateway connected to Auth Service and Payment Service",
+    "expectedCharacteristics": ["3 rectangle elements labeled API Gateway, Auth Service, Payment Service", "2 arrow elements"],
+    "difficulty": "medium",
+    "category": "create"
+  },
+  {
+    "id": "create-05",
+    "input": "Draw a flow with Input, Decision diamond, and 2 outputs Pass and Fail",
+    "expectedCharacteristics": ["1 rectangle element labeled Input", "1 diamond element labeled Decision", "2 rectangle elements labeled Pass, Fail", "3 arrow elements"],
+    "difficulty": "medium",
+    "category": "create"
+  },
+  {
+    "id": "modify-01",
+    "input": "make the login box red",
+    "seed": {
+      "elements": [
+        {"id": "rect_login", "type": "rectangle", "label": "login", "color": "blue"},
+        {"id": "rect_db", "type": "rectangle", "label": "database", "color": "gray"}
+      ]
+    },
+    "expectedCharacteristics": ["rect_login color changed to red", "rect_db untouched"],
+    "preservedIds": ["rect_login", "rect_db"],
+    "difficulty": "simple",
+    "category": "modify"
+  },
+  {
+    "id": "modify-02",
+    "input": "change the validate step into a diamond shape",
+    "seed": {
+      "elements": [
+        {"id": "rect_form", "type": "rectangle", "label": "Form"},
+        {"id": "node_validate", "type": "rectangle", "label": "Validate"},
+        {"id": "rect_create", "type": "rectangle", "label": "Create Account"}
+      ]
+    },
+    "expectedCharacteristics": ["node_validate type changed to diamond"],
+    "preservedIds": ["rect_form", "node_validate", "rect_create"],
+    "difficulty": "medium",
+    "category": "modify"
+  },
+  {
+    "id": "modify-03",
+    "input": "add a cache between the API and the database",
+    "seed": {
+      "elements": [
+        {"id": "node_api", "type": "rectangle", "label": "API"},
+        {"id": "node_db", "type": "rectangle", "label": "Database"},
+        {"id": "arrow_1", "type": "arrow", "from": "node_api", "to": "node_db"}
+      ]
+    },
+    "expectedCharacteristics": ["rect_cache added", "arrow rerouted"],
+    "preservedIds": ["node_api", "node_db"],
+    "difficulty": "hard",
+    "category": "modify"
+  },
+  {
+    "id": "modify-04",
+    "input": "color the database node green",
+    "seed": {
+      "elements": [
+        {"id": "node_app", "type": "rectangle", "label": "App"},
+        {"id": "node_db", "type": "rectangle", "label": "PostgreSQL"}
+      ]
+    },
+    "expectedCharacteristics": ["node_db color changed to green"],
+    "preservedIds": ["node_app", "node_db"],
+    "difficulty": "simple",
+    "category": "modify"
+  },
+  {
+    "id": "modify-05",
+    "input": "change the label of node_app to Web Dashboard",
+    "seed": {
+      "elements": [
+        {"id": "node_app", "type": "rectangle", "label": "App"}
+      ]
+    },
+    "expectedCharacteristics": ["node_app label updated"],
+    "preservedIds": ["node_app"],
+    "difficulty": "simple",
+    "category": "modify"
+  },
+  {
+    "id": "domain-01",
+    "input": "Draw a Microservices architecture with Kubernetes ingress, Redis cache, and Kafka queue",
+    "expectedCharacteristics": ["Microservices domain terms present"],
+    "keywords": ["Kubernetes", "Redis", "Kafka"],
+    "difficulty": "medium",
+    "category": "domain"
+  },
+  {
+    "id": "domain-02",
+    "input": "Draw a CI/CD pipeline showing Build, Unit Test, Docker Push, and Deployment to AWS ECS",
+    "expectedCharacteristics": ["CI/CD terms present"],
+    "keywords": ["Build", "Test", "Docker", "AWS"],
+    "difficulty": "medium",
+    "category": "domain"
+  },
+  {
+    "id": "domain-03",
+    "input": "Draw an ETL data workflow with Extract from Postgres, Transform via Spark, and Load to Snowflake",
+    "expectedCharacteristics": ["ETL pipeline terms present"],
+    "keywords": ["Extract", "Transform", "Spark", "Snowflake"],
+    "difficulty": "hard",
+    "category": "domain"
+  },
+  {
+    "id": "domain-04",
+    "input": "Draw a OAuth2 authentication flow with Resource Owner, Authorization Server, and Resource Server",
+    "expectedCharacteristics": ["OAuth2 terms present"],
+    "keywords": ["Owner", "Authorization", "Resource"],
+    "difficulty": "hard",
+    "category": "domain"
+  },
+  {
+    "id": "edge-01",
+    "input": "Draw a single isolated box named Alone",
+    "expectedCharacteristics": ["1 rectangle element labeled Alone", "0 arrows"],
+    "difficulty": "simple",
+    "category": "edge"
+  },
+  {
+    "id": "edge-02",
+    "input": "Draw 5 connected nodes in a circle forming a closed loop",
+    "expectedCharacteristics": ["5 nodes", "5 arrows forming loop"],
+    "difficulty": "hard",
+    "category": "edge"
+  },
+  {
+    "id": "edge-03",
+    "input": "Draw a complex system with 8 nodes and 10 cross connections",
+    "expectedCharacteristics": ["8 nodes", "10 arrows"],
+    "difficulty": "hard",
+    "category": "edge"
+  },
+  {
+    "id": "edge-04",
+    "input": "Make an empty diagram",
+    "expectedCharacteristics": ["0 elements"],
+    "difficulty": "simple",
+    "category": "edge"
+  }
+]
