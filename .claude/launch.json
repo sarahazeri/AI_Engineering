@@ -1,0 +1,19 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "excali-agent",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "streamlit", "run", "Session3/agent_3_excali.py", "--server.headless", "true"],
+      "port": 8501,
+      "autoPort": true
+    },
+    {
+      "name": "excali-agent-v2",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "streamlit", "run", "Session3/agent_4_improvement.py", "--server.headless", "true"],
+      "port": 8503,
+      "autoPort": true
+    }
+  ]
+}
