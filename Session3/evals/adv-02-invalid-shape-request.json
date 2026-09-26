@@ -7,7 +7,7 @@
           "icon": "🔷",
           "id": "node_special_step",
           "label": "Special Step",
-          "shape": "rectangle"
+          "shape": "ellipse"
         },
         {
           "bg_color": "#fff3e0",
@@ -20,6 +20,7 @@
       "arrows": [
         {
           "from": "node_special_step",
+          "label": "",
           "to": "node_normal_step"
         }
       ],
@@ -29,7 +30,7 @@
   "final_elements": [
     {
       "id": "node_special_step",
-      "type": "rectangle",
+      "type": "ellipse",
       "x": 0.0,
       "y": -46.0,
       "width": 159,

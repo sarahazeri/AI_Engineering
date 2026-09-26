@@ -18,7 +18,7 @@
         },
         {
           "bg_color": "#fff3e0",
-          "icon": "💾",
+          "icon": "🗄️",
           "id": "node_store",
           "label": "Store",
           "shape": "rectangle"
@@ -53,7 +53,7 @@
           "shape": "rectangle"
         },
         {
-          "bg_color": "#ffeb3b",
+          "bg_color": "#fff9c4",
           "icon": "✅",
           "id": "node_validate",
           "label": "Validate",
@@ -61,7 +61,7 @@
         },
         {
           "bg_color": "#fff3e0",
-          "icon": "💾",
+          "icon": "🗄️",
           "id": "node_store",
           "label": "Store",
           "shape": "rectangle"
@@ -208,7 +208,7 @@
       "height": 92,
       "angle": 0,
       "strokeColor": "#1e1e1e",
-      "backgroundColor": "#ffeb3b",
+      "backgroundColor": "#fff9c4",
       "fillStyle": "solid",
       "strokeWidth": 2,
       "strokeStyle": "solid",
@@ -305,7 +305,7 @@
       "strokeStyle": "solid",
       "roughness": 0,
       "opacity": 100,
-      "text": "💾\nStore",
+      "text": "🗄️\nStore",
       "fontSize": 16,
       "fontFamily": 1,
       "textAlign": "center",

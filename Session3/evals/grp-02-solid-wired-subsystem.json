@@ -9,23 +9,23 @@
           "shape": "rectangle"
         },
         {
-          "group": "group_resmgr",
+          "group": "group_resource_manager",
           "icon": "⚙️",
           "id": "node_scheduler",
           "label": "Scheduler",
           "shape": "rectangle"
         },
         {
-          "group": "group_resmgr",
-          "icon": "📥",
-          "id": "node_hpqueue",
+          "group": "group_resource_manager",
+          "icon": "🚀",
+          "id": "node_hp_queue",
           "label": "HighPriorityQueue",
           "shape": "rectangle"
         },
         {
-          "group": "group_resmgr",
+          "group": "group_resource_manager",
           "icon": "📥",
-          "id": "node_lpqueue",
+          "id": "node_lp_queue",
           "label": "LowPriorityQueue",
           "shape": "rectangle"
         }
@@ -34,22 +34,20 @@
         {
           "from": "node_api",
           "label": "request",
-          "to": "group_resmgr"
+          "to": "group_resource_manager"
         },
         {
           "from": "node_scheduler",
-          "label": "push HP",
-          "to": "node_hpqueue"
+          "to": "node_hp_queue"
         },
         {
           "from": "node_scheduler",
-          "label": "push LP",
-          "to": "node_lpqueue"
+          "to": "node_lp_queue"
         }
       ],
       "groups": [
         {
-          "id": "group_resmgr",
+          "id": "group_resource_manager",
           "style": "solid",
           "title": "Resource Manager"
         }
@@ -58,7 +56,7 @@
   ],
   "final_elements": [
     {
-      "id": "group_resmgr",
+      "id": "group_resource_manager",
       "type": "rectangle",
       "x": 220.0,
       "y": -170.0,
@@ -86,7 +84,7 @@
       "isDeleted": false
     },
     {
-      "id": "title_group_resmgr",
+      "id": "title_group_resource_manager",
       "type": "text",
       "x": 234.0,
       "y": -162.0,
@@ -222,7 +220,7 @@
       "containerId": "node_scheduler"
     },
     {
-      "id": "node_hpqueue",
+      "id": "node_hp_queue",
       "type": "rectangle",
       "x": 479.0,
       "y": -104.0,
@@ -243,7 +241,7 @@
       },
       "boundElements": [
         {
-          "id": "text_node_hpqueue",
+          "id": "text_node_hp_queue",
           "type": "text"
         },
         {
@@ -254,7 +252,7 @@
       "isDeleted": false
     },
     {
-      "id": "text_node_hpqueue",
+      "id": "text_node_hp_queue",
       "type": "text",
       "x": 489.0,
       "y": -98.0,
@@ -268,16 +266,16 @@
       "strokeStyle": "solid",
       "roughness": 0,
       "opacity": 100,
-      "text": "📥\nHighPriorityQueue",
+      "text": "🚀\nHighPriorityQueue",
       "fontSize": 16,
       "fontFamily": 1,
       "textAlign": "center",
       "verticalAlign": "middle",
       "isDeleted": false,
-      "containerId": "node_hpqueue"
+      "containerId": "node_hp_queue"
     },
     {
-      "id": "node_lpqueue",
+      "id": "node_lp_queue",
       "type": "rectangle",
       "x": 479.0,
       "y": 48.0,
@@ -298,7 +296,7 @@
       },
       "boundElements": [
         {
-          "id": "text_node_lpqueue",
+          "id": "text_node_lp_queue",
           "type": "text"
         },
         {
@@ -309,7 +307,7 @@
       "isDeleted": false
     },
     {
-      "id": "text_node_lpqueue",
+      "id": "text_node_lp_queue",
       "type": "text",
       "x": 489.0,
       "y": 54.0,
@@ -329,7 +327,7 @@
       "textAlign": "center",
       "verticalAlign": "middle",
       "isDeleted": false,
-      "containerId": "node_lpqueue"
+      "containerId": "node_lp_queue"
     },
     {
       "id": "arrow_0",
@@ -362,34 +360,12 @@
         "gap": 6
       },
       "endBinding": {
-        "elementId": "node_hpqueue",
+        "elementId": "node_hp_queue",
         "focus": 0,
         "gap": 6
       },
       "endArrowhead": "arrow",
       "startArrowhead": null,
-      "isDeleted": false
-    },
-    {
-      "id": "text_arrow_0",
-      "type": "text",
-      "x": 394.0,
-      "y": -42.40968342644321,
-      "width": 70,
-      "height": 20,
-      "angle": 0,
-      "strokeColor": "#1e1e1e",
-      "backgroundColor": "#ffffff",
-      "fillStyle": "hachure",
-      "strokeWidth": 1,
-      "strokeStyle": "solid",
-      "roughness": 0,
-      "opacity": 100,
-      "text": "push HP",
-      "fontSize": 14,
-      "fontFamily": 1,
-      "textAlign": "center",
-      "verticalAlign": "middle",
       "isDeleted": false
     },
     {
@@ -423,34 +399,12 @@
         "gap": 6
       },
       "endBinding": {
-        "elementId": "node_lpqueue",
+        "elementId": "node_lp_queue",
         "focus": 0,
         "gap": 6
       },
       "endArrowhead": "arrow",
       "startArrowhead": null,
-      "isDeleted": false
-    },
-    {
-      "id": "text_arrow_1",
-      "type": "text",
-      "x": 394.0,
-      "y": 23.024667931688796,
-      "width": 70,
-      "height": 20,
-      "angle": 0,
-      "strokeColor": "#1e1e1e",
-      "backgroundColor": "#ffffff",
-      "fillStyle": "hachure",
-      "strokeWidth": 1,
-      "strokeStyle": "solid",
-      "roughness": 0,
-      "opacity": 100,
-      "text": "push LP",
-      "fontSize": 14,
-      "fontFamily": 1,
-      "textAlign": "center",
-      "verticalAlign": "middle",
       "isDeleted": false
     },
     {
@@ -484,7 +438,7 @@
         "gap": 6
       },
       "endBinding": {
-        "elementId": "group_resmgr",
+        "elementId": "group_resource_manager",
         "focus": 0,
         "gap": 6
       },

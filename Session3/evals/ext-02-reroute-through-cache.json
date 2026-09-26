@@ -7,7 +7,7 @@
           "icon": "🌐",
           "id": "node_lb",
           "label": "Load Balancer",
-          "shape": "ellipse"
+          "shape": "rectangle"
         },
         {
           "bg_color": "#fff3e0",
@@ -58,7 +58,7 @@
           "icon": "🌐",
           "id": "node_lb",
           "label": "Load Balancer",
-          "shape": "ellipse"
+          "shape": "rectangle"
         },
         {
           "bg_color": "#fff3e0",
@@ -75,9 +75,9 @@
           "shape": "rectangle"
         },
         {
-          "bg_color": "#fff8e1",
+          "bg_color": "#fff9c4",
           "icon": "🗂️",
-          "id": "node_redis",
+          "id": "node_cache",
           "label": "Redis Cache",
           "shape": "rectangle"
         },
@@ -100,14 +100,14 @@
         },
         {
           "from": "node_app1",
-          "to": "node_redis"
+          "to": "node_cache"
         },
         {
           "from": "node_app2",
-          "to": "node_redis"
+          "to": "node_cache"
         },
         {
-          "from": "node_redis",
+          "from": "node_cache",
           "to": "node_db"
         }
       ],
@@ -117,7 +117,7 @@
   "final_elements": [
     {
       "id": "node_lb",
-      "type": "ellipse",
+      "type": "rectangle",
       "x": 0.0,
       "y": -46.0,
       "width": 168,
@@ -293,7 +293,7 @@
       "containerId": "node_app2"
     },
     {
-      "id": "node_redis",
+      "id": "node_cache",
       "type": "rectangle",
       "x": 527.0,
       "y": -46.0,
@@ -301,7 +301,7 @@
       "height": 92,
       "angle": 0,
       "strokeColor": "#1e1e1e",
-      "backgroundColor": "#fff8e1",
+      "backgroundColor": "#fff9c4",
       "fillStyle": "solid",
       "strokeWidth": 2,
       "strokeStyle": "solid",
@@ -314,7 +314,7 @@
       },
       "boundElements": [
         {
-          "id": "text_node_redis",
+          "id": "text_node_cache",
           "type": "text"
         },
         {
@@ -333,7 +333,7 @@
       "isDeleted": false
     },
     {
-      "id": "text_node_redis",
+      "id": "text_node_cache",
       "type": "text",
       "x": 537.0,
       "y": -40.0,
@@ -353,7 +353,7 @@
       "textAlign": "center",
       "verticalAlign": "middle",
       "isDeleted": false,
-      "containerId": "node_redis"
+      "containerId": "node_cache"
     },
     {
       "id": "node_db",
@@ -519,7 +519,7 @@
         "gap": 6
       },
       "endBinding": {
-        "elementId": "node_redis",
+        "elementId": "node_cache",
         "focus": 0,
         "gap": 6
       },
@@ -558,7 +558,7 @@
         "gap": 6
       },
       "endBinding": {
-        "elementId": "node_redis",
+        "elementId": "node_cache",
         "focus": 0,
         "gap": 6
       },
@@ -592,7 +592,7 @@
         ]
       ],
       "startBinding": {
-        "elementId": "node_redis",
+        "elementId": "node_cache",
         "focus": 0,
         "gap": 6
       },

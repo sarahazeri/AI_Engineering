@@ -10,7 +10,7 @@
           "shape": "rectangle"
         },
         {
-          "bg_color": "#fff3e0",
+          "bg_color": "#fff9c4",
           "group": "group_workers",
           "icon": "🤖",
           "id": "node_worker1",
@@ -18,7 +18,7 @@
           "shape": "rectangle"
         },
         {
-          "bg_color": "#fff3e0",
+          "bg_color": "#fff9c4",
           "group": "group_workers",
           "icon": "🤖",
           "id": "node_worker2",
@@ -26,7 +26,7 @@
           "shape": "rectangle"
         },
         {
-          "bg_color": "#fff3e0",
+          "bg_color": "#fff9c4",
           "group": "group_workers",
           "icon": "🤖",
           "id": "node_worker3",
@@ -34,7 +34,7 @@
           "shape": "rectangle"
         },
         {
-          "bg_color": "#fff3e0",
+          "bg_color": "#fff9c4",
           "group": "group_workers",
           "icon": "🤖",
           "id": "node_worker4",
@@ -173,7 +173,7 @@
       "height": 92,
       "angle": 0,
       "strokeColor": "#1e1e1e",
-      "backgroundColor": "#fff3e0",
+      "backgroundColor": "#fff9c4",
       "fillStyle": "solid",
       "strokeWidth": 2,
       "strokeStyle": "solid",
@@ -224,7 +224,7 @@
       "height": 92,
       "angle": 0,
       "strokeColor": "#1e1e1e",
-      "backgroundColor": "#fff3e0",
+      "backgroundColor": "#fff9c4",
       "fillStyle": "solid",
       "strokeWidth": 2,
       "strokeStyle": "solid",
@@ -275,7 +275,7 @@
       "height": 92,
       "angle": 0,
       "strokeColor": "#1e1e1e",
-      "backgroundColor": "#fff3e0",
+      "backgroundColor": "#fff9c4",
       "fillStyle": "solid",
       "strokeWidth": 2,
       "strokeStyle": "solid",
@@ -326,7 +326,7 @@
       "height": 92,
       "angle": 0,
       "strokeColor": "#1e1e1e",
-      "backgroundColor": "#fff3e0",
+      "backgroundColor": "#fff9c4",
       "fillStyle": "solid",
       "strokeWidth": 2,
       "strokeStyle": "solid",

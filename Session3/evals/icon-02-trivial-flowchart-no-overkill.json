@@ -3,68 +3,42 @@
     {
       "nodes": [
         {
-          "bg_color": "#e0f7fa",
-          "icon": "🏁",
-          "id": "node_start",
-          "label": "Start",
-          "shape": "ellipse"
-        },
-        {
-          "bg_color": "#fff9c4",
-          "icon": "💧",
-          "id": "node_boil",
+          "icon": "🫖",
+          "id": "node_boild_water",
           "label": "Boil Water",
           "shape": "rectangle"
         },
         {
-          "bg_color": "#fff9c4",
-          "icon": "🍵",
-          "id": "node_steep",
+          "icon": "🍃",
+          "id": "node_steep_tea",
           "label": "Steep Tea",
           "shape": "rectangle"
         },
         {
-          "bg_color": "#fff9c4",
           "icon": "🥛",
-          "id": "node_milk",
+          "id": "node_add_milk",
           "label": "Add Milk",
           "shape": "rectangle"
         },
         {
-          "bg_color": "#fff9c4",
           "icon": "☕",
           "id": "node_serve",
           "label": "Serve",
           "shape": "rectangle"
-        },
-        {
-          "bg_color": "#e0f7fa",
-          "icon": "🏁",
-          "id": "node_end",
-          "label": "End",
-          "shape": "ellipse"
         }
       ],
       "arrows": [
         {
-          "from": "node_start",
-          "to": "node_boil"
+          "from": "node_boild_water",
+          "to": "node_steep_tea"
         },
         {
-          "from": "node_boil",
-          "to": "node_steep"
+          "from": "node_steep_tea",
+          "to": "node_add_milk"
         },
         {
-          "from": "node_steep",
-          "to": "node_milk"
-        },
-        {
-          "from": "node_milk",
+          "from": "node_add_milk",
           "to": "node_serve"
-        },
-        {
-          "from": "node_serve",
-          "to": "node_end"
         }
       ],
       "groups": []
@@ -72,70 +46,15 @@
   ],
   "final_elements": [
     {
-      "id": "node_start",
-      "type": "ellipse",
-      "x": 0.0,
-      "y": -46.0,
-      "width": 120,
-      "height": 92,
-      "angle": 0,
-      "strokeColor": "#1e1e1e",
-      "backgroundColor": "#e0f7fa",
-      "fillStyle": "solid",
-      "strokeWidth": 2,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "groupIds": [],
-      "frameId": null,
-      "roundness": {
-        "type": 3
-      },
-      "boundElements": [
-        {
-          "id": "text_node_start",
-          "type": "text"
-        },
-        {
-          "id": "arrow_0",
-          "type": "arrow"
-        }
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "text_node_start",
-      "type": "text",
-      "x": 10.0,
-      "y": -40.0,
-      "width": 100,
-      "height": 80,
-      "angle": 0,
-      "strokeColor": "#1e1e1e",
-      "backgroundColor": "transparent",
-      "fillStyle": "hachure",
-      "strokeWidth": 1,
-      "strokeStyle": "solid",
-      "roughness": 0,
-      "opacity": 100,
-      "text": "🏁\nStart",
-      "fontSize": 16,
-      "fontFamily": 1,
-      "textAlign": "center",
-      "verticalAlign": "middle",
-      "isDeleted": false,
-      "containerId": "node_start"
-    },
-    {
-      "id": "node_boil",
+      "id": "node_boild_water",
       "type": "rectangle",
-      "x": 220.0,
+      "x": 0.0,
       "y": -46.0,
       "width": 139,
       "height": 92,
       "angle": 0,
       "strokeColor": "#1e1e1e",
-      "backgroundColor": "#fff9c4",
+      "backgroundColor": "#e0e7ff",
       "fillStyle": "solid",
       "strokeWidth": 2,
       "strokeStyle": "solid",
@@ -148,24 +67,20 @@
       },
       "boundElements": [
         {
-          "id": "text_node_boil",
+          "id": "text_node_boild_water",
           "type": "text"
         },
         {
           "id": "arrow_0",
-          "type": "arrow"
-        },
-        {
-          "id": "arrow_1",
           "type": "arrow"
         }
       ],
       "isDeleted": false
     },
     {
-      "id": "text_node_boil",
+      "id": "text_node_boild_water",
       "type": "text",
-      "x": 230.0,
+      "x": 10.0,
       "y": -40.0,
       "width": 119,
       "height": 80,
@@ -177,24 +92,24 @@
       "strokeStyle": "solid",
       "roughness": 0,
       "opacity": 100,
-      "text": "💧\nBoil Water",
+      "text": "🫖\nBoil Water",
       "fontSize": 16,
       "fontFamily": 1,
       "textAlign": "center",
       "verticalAlign": "middle",
       "isDeleted": false,
-      "containerId": "node_boil"
+      "containerId": "node_boild_water"
     },
     {
-      "id": "node_steep",
+      "id": "node_steep_tea",
       "type": "rectangle",
-      "x": 459.0,
+      "x": 239.0,
       "y": -46.0,
       "width": 129,
       "height": 92,
       "angle": 0,
       "strokeColor": "#1e1e1e",
-      "backgroundColor": "#fff9c4",
+      "backgroundColor": "#e0e7ff",
       "fillStyle": "solid",
       "strokeWidth": 2,
       "strokeStyle": "solid",
@@ -207,7 +122,66 @@
       },
       "boundElements": [
         {
-          "id": "text_node_steep",
+          "id": "text_node_steep_tea",
+          "type": "text"
+        },
+        {
+          "id": "arrow_0",
+          "type": "arrow"
+        },
+        {
+          "id": "arrow_1",
+          "type": "arrow"
+        }
+      ],
+      "isDeleted": false
+    },
+    {
+      "id": "text_node_steep_tea",
+      "type": "text",
+      "x": 249.0,
+      "y": -40.0,
+      "width": 109,
+      "height": 80,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "text": "🍃\nSteep Tea",
+      "fontSize": 16,
+      "fontFamily": 1,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "isDeleted": false,
+      "containerId": "node_steep_tea"
+    },
+    {
+      "id": "node_add_milk",
+      "type": "rectangle",
+      "x": 468.0,
+      "y": -46.0,
+      "width": 120,
+      "height": 92,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "#e0e7ff",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "roundness": {
+        "type": 3
+      },
+      "boundElements": [
+        {
+          "id": "text_node_add_milk",
           "type": "text"
         },
         {
@@ -222,68 +196,9 @@
       "isDeleted": false
     },
     {
-      "id": "text_node_steep",
+      "id": "text_node_add_milk",
       "type": "text",
-      "x": 469.0,
-      "y": -40.0,
-      "width": 109,
-      "height": 80,
-      "angle": 0,
-      "strokeColor": "#1e1e1e",
-      "backgroundColor": "transparent",
-      "fillStyle": "hachure",
-      "strokeWidth": 1,
-      "strokeStyle": "solid",
-      "roughness": 0,
-      "opacity": 100,
-      "text": "🍵\nSteep Tea",
-      "fontSize": 16,
-      "fontFamily": 1,
-      "textAlign": "center",
-      "verticalAlign": "middle",
-      "isDeleted": false,
-      "containerId": "node_steep"
-    },
-    {
-      "id": "node_milk",
-      "type": "rectangle",
-      "x": 688.0,
-      "y": -46.0,
-      "width": 120,
-      "height": 92,
-      "angle": 0,
-      "strokeColor": "#1e1e1e",
-      "backgroundColor": "#fff9c4",
-      "fillStyle": "solid",
-      "strokeWidth": 2,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "groupIds": [],
-      "frameId": null,
-      "roundness": {
-        "type": 3
-      },
-      "boundElements": [
-        {
-          "id": "text_node_milk",
-          "type": "text"
-        },
-        {
-          "id": "arrow_2",
-          "type": "arrow"
-        },
-        {
-          "id": "arrow_3",
-          "type": "arrow"
-        }
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "text_node_milk",
-      "type": "text",
-      "x": 698.0,
+      "x": 478.0,
       "y": -40.0,
       "width": 100,
       "height": 80,
@@ -301,18 +216,18 @@
       "textAlign": "center",
       "verticalAlign": "middle",
       "isDeleted": false,
-      "containerId": "node_milk"
+      "containerId": "node_add_milk"
     },
     {
       "id": "node_serve",
       "type": "rectangle",
-      "x": 908.0,
+      "x": 688.0,
       "y": -46.0,
       "width": 120,
       "height": 92,
       "angle": 0,
       "strokeColor": "#1e1e1e",
-      "backgroundColor": "#fff9c4",
+      "backgroundColor": "#e0e7ff",
       "fillStyle": "solid",
       "strokeWidth": 2,
       "strokeStyle": "solid",
@@ -329,11 +244,7 @@
           "type": "text"
         },
         {
-          "id": "arrow_3",
-          "type": "arrow"
-        },
-        {
-          "id": "arrow_4",
+          "id": "arrow_2",
           "type": "arrow"
         }
       ],
@@ -342,7 +253,7 @@
     {
       "id": "text_node_serve",
       "type": "text",
-      "x": 918.0,
+      "x": 698.0,
       "y": -40.0,
       "width": 100,
       "height": 80,
@@ -363,64 +274,9 @@
       "containerId": "node_serve"
     },
     {
-      "id": "node_end",
-      "type": "ellipse",
-      "x": 1128.0,
-      "y": -46.0,
-      "width": 120,
-      "height": 92,
-      "angle": 0,
-      "strokeColor": "#1e1e1e",
-      "backgroundColor": "#e0f7fa",
-      "fillStyle": "solid",
-      "strokeWidth": 2,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "groupIds": [],
-      "frameId": null,
-      "roundness": {
-        "type": 3
-      },
-      "boundElements": [
-        {
-          "id": "text_node_end",
-          "type": "text"
-        },
-        {
-          "id": "arrow_4",
-          "type": "arrow"
-        }
-      ],
-      "isDeleted": false
-    },
-    {
-      "id": "text_node_end",
-      "type": "text",
-      "x": 1138.0,
-      "y": -40.0,
-      "width": 100,
-      "height": 80,
-      "angle": 0,
-      "strokeColor": "#1e1e1e",
-      "backgroundColor": "transparent",
-      "fillStyle": "hachure",
-      "strokeWidth": 1,
-      "strokeStyle": "solid",
-      "roughness": 0,
-      "opacity": 100,
-      "text": "🏁\nEnd",
-      "fontSize": 16,
-      "fontFamily": 1,
-      "textAlign": "center",
-      "verticalAlign": "middle",
-      "isDeleted": false,
-      "containerId": "node_end"
-    },
-    {
       "id": "arrow_0",
       "type": "arrow",
-      "x": 126.0,
+      "x": 145.0,
       "y": 0.0,
       "width": 88.0,
       "height": 0.0,
@@ -443,12 +299,12 @@
         ]
       ],
       "startBinding": {
-        "elementId": "node_start",
+        "elementId": "node_boild_water",
         "focus": 0,
         "gap": 6
       },
       "endBinding": {
-        "elementId": "node_boil",
+        "elementId": "node_steep_tea",
         "focus": 0,
         "gap": 6
       },
@@ -459,7 +315,7 @@
     {
       "id": "arrow_1",
       "type": "arrow",
-      "x": 365.0,
+      "x": 374.0,
       "y": 0.0,
       "width": 88.0,
       "height": 0.0,
@@ -482,12 +338,12 @@
         ]
       ],
       "startBinding": {
-        "elementId": "node_boil",
+        "elementId": "node_steep_tea",
         "focus": 0,
         "gap": 6
       },
       "endBinding": {
-        "elementId": "node_steep",
+        "elementId": "node_add_milk",
         "focus": 0,
         "gap": 6
       },
@@ -521,90 +377,12 @@
         ]
       ],
       "startBinding": {
-        "elementId": "node_steep",
-        "focus": 0,
-        "gap": 6
-      },
-      "endBinding": {
-        "elementId": "node_milk",
-        "focus": 0,
-        "gap": 6
-      },
-      "endArrowhead": "arrow",
-      "startArrowhead": null,
-      "isDeleted": false
-    },
-    {
-      "id": "arrow_3",
-      "type": "arrow",
-      "x": 814.0,
-      "y": 0.0,
-      "width": 88.0,
-      "height": 0.0,
-      "angle": 0,
-      "strokeColor": "#1e1e1e",
-      "backgroundColor": "transparent",
-      "fillStyle": "hachure",
-      "strokeWidth": 2,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "points": [
-        [
-          0,
-          0
-        ],
-        [
-          88.0,
-          0.0
-        ]
-      ],
-      "startBinding": {
-        "elementId": "node_milk",
+        "elementId": "node_add_milk",
         "focus": 0,
         "gap": 6
       },
       "endBinding": {
         "elementId": "node_serve",
-        "focus": 0,
-        "gap": 6
-      },
-      "endArrowhead": "arrow",
-      "startArrowhead": null,
-      "isDeleted": false
-    },
-    {
-      "id": "arrow_4",
-      "type": "arrow",
-      "x": 1034.0,
-      "y": 0.0,
-      "width": 88.0,
-      "height": 0.0,
-      "angle": 0,
-      "strokeColor": "#1e1e1e",
-      "backgroundColor": "transparent",
-      "fillStyle": "hachure",
-      "strokeWidth": 2,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "points": [
-        [
-          0,
-          0
-        ],
-        [
-          88.0,
-          0.0
-        ]
-      ],
-      "startBinding": {
-        "elementId": "node_serve",
-        "focus": 0,
-        "gap": 6
-      },
-      "endBinding": {
-        "elementId": "node_end",
         "focus": 0,
         "gap": 6
       },

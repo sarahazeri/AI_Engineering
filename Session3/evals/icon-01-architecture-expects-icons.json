@@ -4,83 +4,238 @@
       "nodes": [
         {
           "bg_color": "#e0f7fa",
-          "icon": "🌐",
+          "icon": "🖥️",
           "id": "node_client",
           "label": "Client",
           "shape": "ellipse"
         },
         {
-          "bg_color": "#fff3e0",
+          "bg_color": "#e8f5e9",
           "icon": "🚪",
           "id": "node_api_gateway",
           "label": "API Gateway",
           "shape": "rectangle"
         },
         {
-          "bg_color": "#e8f5e9",
+          "bg_color": "#fff3e0",
+          "group": "group_backend",
           "icon": "🔐",
           "id": "node_auth_service",
           "label": "Auth Service",
           "shape": "rectangle"
         },
         {
-          "bg_color": "#e8f5e9",
+          "bg_color": "#fff3e0",
+          "group": "group_backend",
           "icon": "💳",
           "id": "node_payments_service",
           "label": "Payments Service",
           "shape": "rectangle"
         },
         {
-          "bg_color": "#f3e5f5",
+          "bg_color": "#e3f2fd",
+          "group": "group_datastore",
           "icon": "🗄️",
           "id": "node_database",
           "label": "Database",
           "shape": "ellipse"
         },
         {
-          "bg_color": "#fffde7",
+          "bg_color": "#f3e5f5",
+          "group": "group_queue",
           "icon": "📬",
           "id": "node_message_queue",
           "label": "Message Queue",
-          "shape": "rectangle"
+          "shape": "ellipse"
         }
       ],
       "arrows": [
         {
           "from": "node_client",
-          "label": "HTTP request",
+          "label": "HTTP Request",
           "to": "node_api_gateway"
         },
         {
           "from": "node_api_gateway",
-          "label": "Auth request",
+          "label": "Auth Call",
           "to": "node_auth_service"
         },
         {
           "from": "node_api_gateway",
-          "label": "Payment request",
+          "label": "Payment Call",
           "to": "node_payments_service"
         },
         {
           "from": "node_auth_service",
-          "label": "Query",
+          "label": "Read/Write",
           "to": "node_database"
         },
         {
           "from": "node_payments_service",
-          "label": "Query",
+          "label": "Read/Write",
           "to": "node_database"
         },
         {
           "from": "node_payments_service",
-          "label": "Publish async job",
+          "label": "Enqueue Job",
           "to": "node_message_queue"
         }
       ],
-      "groups": []
+      "groups": [
+        {
+          "id": "group_backend",
+          "style": "solid",
+          "title": "Backend Services"
+        },
+        {
+          "id": "group_datastore",
+          "style": "dashed",
+          "title": "Data Store"
+        },
+        {
+          "id": "group_queue",
+          "style": "dashed",
+          "title": "Async Queue"
+        }
+      ]
     }
   ],
   "final_elements": [
+    {
+      "id": "group_backend",
+      "type": "rectangle",
+      "x": 531.0,
+      "y": -94.0,
+      "width": 457.0,
+      "height": 188.0,
+      "angle": 0,
+      "strokeColor": "#475569",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "roundness": {
+        "type": 3
+      },
+      "boundElements": [],
+      "isDeleted": false
+    },
+    {
+      "id": "title_group_backend",
+      "type": "text",
+      "x": 545.0,
+      "y": -86.0,
+      "width": 429.0,
+      "height": 22,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "text": "Backend Services",
+      "fontSize": 18,
+      "fontFamily": 1,
+      "textAlign": "center",
+      "verticalAlign": "top",
+      "isDeleted": false
+    },
+    {
+      "id": "group_datastore",
+      "type": "rectangle",
+      "x": 1123.0,
+      "y": -218.0,
+      "width": 180.0,
+      "height": 188.0,
+      "angle": 0,
+      "strokeColor": "#475569",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "dashed",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "roundness": {
+        "type": 3
+      },
+      "boundElements": [],
+      "isDeleted": false
+    },
+    {
+      "id": "title_group_datastore",
+      "type": "text",
+      "x": 1137.0,
+      "y": -210.0,
+      "width": 152.0,
+      "height": 22,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "text": "Data Store",
+      "fontSize": 18,
+      "fontFamily": 1,
+      "textAlign": "center",
+      "verticalAlign": "top",
+      "isDeleted": false
+    },
+    {
+      "id": "group_queue",
+      "type": "rectangle",
+      "x": 1123.0,
+      "y": 30.0,
+      "width": 228.0,
+      "height": 188.0,
+      "angle": 0,
+      "strokeColor": "#475569",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "dashed",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "roundness": {
+        "type": 3
+      },
+      "boundElements": [],
+      "isDeleted": false
+    },
+    {
+      "id": "title_group_queue",
+      "type": "text",
+      "x": 1137.0,
+      "y": 38.0,
+      "width": 200.0,
+      "height": 22,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "text": "Async Queue",
+      "fontSize": 18,
+      "fontFamily": 1,
+      "textAlign": "center",
+      "verticalAlign": "top",
+      "isDeleted": false
+    },
     {
       "id": "node_client",
       "type": "ellipse",
@@ -128,7 +283,7 @@
       "strokeStyle": "solid",
       "roughness": 0,
       "opacity": 100,
-      "text": "🌐\nClient",
+      "text": "🖥️\nClient",
       "fontSize": 16,
       "fontFamily": 1,
       "textAlign": "center",
@@ -145,7 +300,7 @@
       "height": 92,
       "angle": 0,
       "strokeColor": "#1e1e1e",
-      "backgroundColor": "#fff3e0",
+      "backgroundColor": "#e8f5e9",
       "fillStyle": "solid",
       "strokeWidth": 2,
       "strokeStyle": "solid",
@@ -202,13 +357,13 @@
     {
       "id": "node_auth_service",
       "type": "rectangle",
-      "x": 583.0,
-      "y": -122.0,
+      "x": 561.0,
+      "y": -28.0,
       "width": 159,
       "height": 92,
       "angle": 0,
       "strokeColor": "#1e1e1e",
-      "backgroundColor": "#e8f5e9",
+      "backgroundColor": "#fff3e0",
       "fillStyle": "solid",
       "strokeWidth": 2,
       "strokeStyle": "solid",
@@ -238,8 +393,8 @@
     {
       "id": "text_node_auth_service",
       "type": "text",
-      "x": 593.0,
-      "y": -116.0,
+      "x": 571.0,
+      "y": -22.0,
       "width": 139,
       "height": 80,
       "angle": 0,
@@ -261,13 +416,13 @@
     {
       "id": "node_payments_service",
       "type": "rectangle",
-      "x": 583.0,
-      "y": 30.0,
+      "x": 760.0,
+      "y": -28.0,
       "width": 198,
       "height": 92,
       "angle": 0,
       "strokeColor": "#1e1e1e",
-      "backgroundColor": "#e8f5e9",
+      "backgroundColor": "#fff3e0",
       "fillStyle": "solid",
       "strokeWidth": 2,
       "strokeStyle": "solid",
@@ -301,8 +456,8 @@
     {
       "id": "text_node_payments_service",
       "type": "text",
-      "x": 593.0,
-      "y": 36.0,
+      "x": 770.0,
+      "y": -22.0,
       "width": 178,
       "height": 80,
       "angle": 0,
@@ -324,13 +479,13 @@
     {
       "id": "node_database",
       "type": "ellipse",
-      "x": 968.0,
-      "y": -122.0,
+      "x": 1153.0,
+      "y": -152.0,
       "width": 120,
       "height": 92,
       "angle": 0,
       "strokeColor": "#1e1e1e",
-      "backgroundColor": "#f3e5f5",
+      "backgroundColor": "#e3f2fd",
       "fillStyle": "solid",
       "strokeWidth": 2,
       "strokeStyle": "solid",
@@ -360,8 +515,8 @@
     {
       "id": "text_node_database",
       "type": "text",
-      "x": 978.0,
-      "y": -116.0,
+      "x": 1163.0,
+      "y": -146.0,
       "width": 100,
       "height": 80,
       "angle": 0,
@@ -382,14 +537,14 @@
     },
     {
       "id": "node_message_queue",
-      "type": "rectangle",
-      "x": 968.0,
-      "y": 30.0,
+      "type": "ellipse",
+      "x": 1153.0,
+      "y": 96.0,
       "width": 168,
       "height": 92,
       "angle": 0,
       "strokeColor": "#1e1e1e",
-      "backgroundColor": "#fffde7",
+      "backgroundColor": "#f3e5f5",
       "fillStyle": "solid",
       "strokeWidth": 2,
       "strokeStyle": "solid",
@@ -415,8 +570,8 @@
     {
       "id": "text_node_message_queue",
       "type": "text",
-      "x": 978.0,
-      "y": 36.0,
+      "x": 1163.0,
+      "y": 102.0,
       "width": 148,
       "height": 80,
       "angle": 0,
@@ -489,7 +644,7 @@
       "strokeStyle": "solid",
       "roughness": 0,
       "opacity": 100,
-      "text": "HTTP request",
+      "text": "HTTP Request",
       "fontSize": 14,
       "fontFamily": 1,
       "textAlign": "center",
@@ -499,10 +654,10 @@
     {
       "id": "arrow_1",
       "type": "arrow",
-      "x": 418.84144741872086,
-      "y": -18.84552470315674,
-      "width": 158.31710516255833,
-      "height": -37.136111087513676,
+      "x": 418.9893708840828,
+      "y": 4.79737972156785,
+      "width": 136.02125823183434,
+      "height": 8.107227311831187,
       "angle": 0,
       "strokeColor": "#1e1e1e",
       "backgroundColor": "transparent",
@@ -517,8 +672,8 @@
           0
         ],
         [
-          158.31710516255833,
-          -37.136111087513676
+          136.02125823183434,
+          8.107227311831187
         ]
       ],
       "startBinding": {
@@ -538,9 +693,9 @@
     {
       "id": "text_arrow_1",
       "type": "text",
-      "x": 441.0,
-      "y": -65.41358024691358,
-      "width": 114,
+      "x": 443.0,
+      "y": -19.149006622516556,
+      "width": 88,
       "height": 20,
       "angle": 0,
       "strokeColor": "#1e1e1e",
@@ -550,7 +705,7 @@
       "strokeStyle": "solid",
       "roughness": 0,
       "opacity": 100,
-      "text": "Auth request",
+      "text": "Auth Call",
       "fontSize": 14,
       "fontFamily": 1,
       "textAlign": "center",
@@ -560,10 +715,10 @@
     {
       "id": "arrow_2",
       "type": "arrow",
-      "x": 418.8583237239715,
-      "y": 17.77942533630811,
-      "width": 158.2833525520569,
-      "height": 35.020479749508965,
+      "x": 418.9964154431445,
+      "y": 2.783737709849376,
+      "width": 335.0071691137111,
+      "height": 11.58526233246263,
       "angle": 0,
       "strokeColor": "#1e1e1e",
       "backgroundColor": "transparent",
@@ -578,8 +733,8 @@
           0
         ],
         [
-          158.2833525520569,
-          35.020479749508965
+          335.0071691137111,
+          11.58526233246263
         ]
       ],
       "startBinding": {
@@ -599,9 +754,9 @@
     {
       "id": "text_arrow_2",
       "type": "text",
-      "x": 428.0,
-      "y": 7.289665211062591,
-      "width": 140,
+      "x": 529.5,
+      "y": -19.423631123919307,
+      "width": 114,
       "height": 20,
       "angle": 0,
       "strokeColor": "#1e1e1e",
@@ -611,7 +766,7 @@
       "strokeStyle": "solid",
       "roughness": 0,
       "opacity": 100,
-      "text": "Payment request",
+      "text": "Payment Call",
       "fontSize": 14,
       "fontFamily": 1,
       "textAlign": "center",
@@ -621,10 +776,10 @@
     {
       "id": "arrow_3",
       "type": "arrow",
-      "x": 748.0,
-      "y": -76.0,
-      "width": 214.0,
-      "height": 0.0,
+      "x": 725.864027149783,
+      "y": -0.48932640449450293,
+      "width": 421.2719457004338,
+      "height": -91.2449279770372,
       "angle": 0,
       "strokeColor": "#1e1e1e",
       "backgroundColor": "transparent",
@@ -639,8 +794,8 @@
           0
         ],
         [
-          214.0,
-          0.0
+          421.2719457004338,
+          -91.2449279770372
         ]
       ],
       "startBinding": {
@@ -660,9 +815,9 @@
     {
       "id": "text_arrow_3",
       "type": "text",
-      "x": 828.5,
-      "y": -104.0,
-      "width": 53,
+      "x": 888.5,
+      "y": -74.11179039301311,
+      "width": 96,
       "height": 20,
       "angle": 0,
       "strokeColor": "#1e1e1e",
@@ -672,7 +827,7 @@
       "strokeStyle": "solid",
       "roughness": 0,
       "opacity": 100,
-      "text": "Query",
+      "text": "Read/Write",
       "fontSize": 14,
       "fontFamily": 1,
       "textAlign": "center",
@@ -682,10 +837,10 @@
     {
       "id": "arrow_4",
       "type": "arrow",
-      "x": 786.493293896401,
-      "y": 30.095431583083958,
-      "width": 176.01341220719792,
-      "height": -77.32381114304653,
+      "x": 963.6626511912885,
+      "y": -18.661493637626485,
+      "width": 183.67469761742302,
+      "height": -64.33802967389957,
       "angle": 0,
       "strokeColor": "#1e1e1e",
       "backgroundColor": "transparent",
@@ -700,8 +855,8 @@
           0
         ],
         [
-          176.01341220719792,
-          -77.32381114304653
+          183.67469761742302,
+          -64.33802967389957
         ]
       ],
       "startBinding": {
@@ -721,9 +876,9 @@
     {
       "id": "text_arrow_4",
       "type": "text",
-      "x": 848.0,
-      "y": -36.566473988439306,
-      "width": 53,
+      "x": 1007.5,
+      "y": -78.83050847457628,
+      "width": 96,
       "height": 20,
       "angle": 0,
       "strokeColor": "#1e1e1e",
@@ -733,7 +888,7 @@
       "strokeStyle": "solid",
       "roughness": 0,
       "opacity": 100,
-      "text": "Query",
+      "text": "Read/Write",
       "fontSize": 14,
       "fontFamily": 1,
       "textAlign": "center",
@@ -743,10 +898,10 @@
     {
       "id": "arrow_5",
       "type": "arrow",
-      "x": 787.0,
-      "y": 76.0,
-      "width": 175.0,
-      "height": 0.0,
+      "x": 963.7010843880614,
+      "y": 52.34638747121592,
+      "width": 183.59783122387717,
+      "height": 60.227859978203085,
       "angle": 0,
       "strokeColor": "#1e1e1e",
       "backgroundColor": "transparent",
@@ -761,8 +916,8 @@
           0
         ],
         [
-          175.0,
-          0.0
+          183.59783122387717,
+          60.227859978203085
         ]
       ],
       "startBinding": {
@@ -782,9 +937,9 @@
     {
       "id": "text_arrow_5",
       "type": "text",
-      "x": 796.0,
-      "y": 48.0,
-      "width": 157,
+      "x": 1003.0,
+      "y": 54.46031746031747,
+      "width": 105,
       "height": 20,
       "angle": 0,
       "strokeColor": "#1e1e1e",
@@ -794,7 +949,7 @@
       "strokeStyle": "solid",
       "roughness": 0,
       "opacity": 100,
-      "text": "Publish async job",
+      "text": "Enqueue Job",
       "fontSize": 14,
       "fontFamily": 1,
       "textAlign": "center",

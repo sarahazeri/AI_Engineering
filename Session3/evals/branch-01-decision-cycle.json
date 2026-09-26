@@ -4,7 +4,7 @@
       "nodes": [
         {
           "bg_color": "#e0f7fa",
-          "icon": "📥",
+          "icon": "🖊️",
           "id": "node_input",
           "label": "Input",
           "shape": "rectangle"
@@ -38,8 +38,8 @@
           "shape": "rectangle"
         },
         {
-          "bg_color": "#fffde7",
-          "icon": "🔄",
+          "bg_color": "#f3e5f5",
+          "icon": "🔁",
           "id": "node_retry",
           "label": "Retry",
           "shape": "rectangle"
@@ -52,12 +52,12 @@
         },
         {
           "from": "node_is_valid",
-          "label": "Yes",
+          "label": "yes",
           "to": "node_process"
         },
         {
           "from": "node_is_valid",
-          "label": "No",
+          "label": "no",
           "to": "node_reject"
         },
         {
@@ -70,6 +70,7 @@
         },
         {
           "from": "node_retry",
+          "label": "retry",
           "to": "node_is_valid"
         }
       ],
@@ -124,7 +125,7 @@
       "strokeStyle": "solid",
       "roughness": 0,
       "opacity": 100,
-      "text": "📥\nInput",
+      "text": "🖊️\nInput",
       "fontSize": 16,
       "fontFamily": 1,
       "textAlign": "center",
@@ -381,7 +382,7 @@
       "height": 92,
       "angle": 0,
       "strokeColor": "#1e1e1e",
-      "backgroundColor": "#fffde7",
+      "backgroundColor": "#f3e5f5",
       "fillStyle": "solid",
       "strokeWidth": 2,
       "strokeStyle": "solid",
@@ -423,7 +424,7 @@
       "strokeStyle": "solid",
       "roughness": 0,
       "opacity": 100,
-      "text": "🔄\nRetry",
+      "text": "🔁\nRetry",
       "fontSize": 16,
       "fontFamily": 1,
       "textAlign": "center",
@@ -532,7 +533,7 @@
       "strokeStyle": "solid",
       "roughness": 0,
       "opacity": 100,
-      "text": "Yes",
+      "text": "yes",
       "fontSize": 14,
       "fontFamily": 1,
       "textAlign": "center",
@@ -593,7 +594,7 @@
       "strokeStyle": "solid",
       "roughness": 0,
       "opacity": 100,
-      "text": "No",
+      "text": "no",
       "fontSize": 14,
       "fontFamily": 1,
       "textAlign": "center",
@@ -723,6 +724,28 @@
       },
       "endArrowhead": "arrow",
       "startArrowhead": null,
+      "isDeleted": false
+    },
+    {
+      "id": "text_arrow_5",
+      "type": "text",
+      "x": 514.0,
+      "y": -190.0,
+      "width": 53,
+      "height": 20,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "#ffffff",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "text": "retry",
+      "fontSize": 14,
+      "fontFamily": 1,
+      "textAlign": "center",
+      "verticalAlign": "middle",
       "isDeleted": false
     }
   ]

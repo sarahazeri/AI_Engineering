@@ -5,7 +5,7 @@
   "elements": [
     {
       "id": "node_special_step",
-      "type": "rectangle",
+      "type": "ellipse",
       "x": 0.0,
       "y": -46.0,
       "width": 159,
